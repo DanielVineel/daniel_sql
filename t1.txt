@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    let a=document.createElement('div')
+    a.style.backgroundColor='red';
+    a.style.height='50px';
+    a.style.width='50px';
+    a.setAttribute('draggable','true')
+    let ele=''
+    a.addEventListener('dragstart',(e)=>{
+ele=e.target;
+    })
+document.body.addEventListener('dragover',(e)=>{e.preventDefault();})
+document.body.addEventListener('drop',(e)=>{document.body.appendChild(ele)})
+
+    setTimeout(()=>{
+        document.appendChild(a)
+        setTimeout(()=>{
+            a.style.backgroundColor='blue';
+        document.appendChild(a)
+    },3000)
+    },3000)
+
+
+</script>
+</html>

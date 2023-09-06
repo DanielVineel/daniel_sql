@@ -1,0 +1,16 @@
+create table employees (
+id int primary key,
+name string,
+salary int
+);
+insert into employees (id,name,salary) values
+(1,'sangeeta,100000);
+insert into employees (id,name,salary) values
+(2,'Ranjita,150000);
+insert into employees (id,name,salary) values
+(3,'Anita,70000);
+insert into employees (id,name,salary) values
+(4,'sunita,50000);
+insert into employees (id,name,salary) values
+(5,'anjeeta,90000);
+select salary from employees order by salary desc;

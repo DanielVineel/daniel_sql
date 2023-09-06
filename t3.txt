@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3
+    </title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: space-around;
+        }
+        .main *{
+            height:200px;
+            width:100px;
+
+        }
+        #item1{
+            background-color: blue;
+        }
+        #item2{
+            background-color: bisque;
+        }
+        #item2 *{
+            border-radius:50%;
+            background-color: brown;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="main">
+        <div id="item1" ></div>
+        <div id="item2"></div>
+    </div>
+    
+</body>
+<script>
+    let sel=''
+    document.getElementById('item2').addEventListener('drop',function(e){
+        document.getElementById('item2').appendChild(sel)
+    })
+
+    document.getElementById('item2').addEventListener('dragover',function(e){e.preventDefault()})
+
+    document.getElementById('item1').addEventListener('click',function(){
+        let a=document.createElement('div')
+        a.style.backgroundColor='orange';
+        a.setAttribute('draggable','true')
+        a.style.height='20px';
+        a.style.width='20px';
+        document.getElementById('item1').appendChild(a)
+        a.addEventListener('dragstart',function(e){
+            sel=e.target
+        })
+    })
+
+</script>
+</html>

@@ -1,0 +1,5 @@
+select * from employeeinfo 
+inner join employeeposition
+on employeeinfo.EmpID=employeeposition.EmpID
+where employeeinfo.address='Hyderabad'
+;

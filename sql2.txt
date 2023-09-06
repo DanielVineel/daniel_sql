@@ -1,0 +1,1 @@
+select EmpFname as EmpName from EmployeeInfo ;
